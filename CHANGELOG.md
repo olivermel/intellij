@@ -4,7 +4,7 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 ## 0.0.1 - 2016-06-15
 
 ### Added
-- Initial work INTELLIJ RPM
+- Initial work intellij rpm
 
 ### Deprecated
 - Nothing.

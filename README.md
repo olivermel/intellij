@@ -1,4 +1,4 @@
-# Intellij 1.3 RPM built for RHEL 6.5
+# Intellij 2016.1.3 RPM built for RHEL 6.5
 
 **Description**:  
 
@@ -25,7 +25,7 @@
 
 ### Install the RPM
 
-Install the built RPM by running "sudo yum install RPMS/x86_64/.rpm"
+Install the built RPM by running "sudo yum install RPMS/x86_64/intellij-2016.1.3-1.el6.x86_64.rpm .rpm"
 
 ## Configuration
 

@@ -3,9 +3,6 @@
 sudo yum -y groupinstall 'Development Tools'
 sudo yum -y groupinstall "X Window System"
 sudo yum -y groupinstall "GNOME Desktop"
-sudo yum -y install vim tree xclock
-sudo yum -y install vim xterm
-sudo yum -y install java-1.8.0-openjdk*
 
 SCRIPT=$(readlink -f "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
