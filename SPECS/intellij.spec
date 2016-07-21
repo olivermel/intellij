@@ -43,20 +43,23 @@ echo $PWD
 mkdir -p %{buildroot}%{optdir}
 mkdir -p %{buildroot}%{prefix}/bin/idea
 mkdir -p %{buildroot}%{sharedir}/pixmaps
-cp -a /home/vagrant/rpmbuild/BUILD/intellij-2016.1.3/idea-IC-145.1617.8/ %{buildroot}%{optdir}
+#cp -a /home/vagrant/rpmbuild/BUILD/intellij-2016.1.3/idea-IC-145.1617.8/ %{buildroot}%{optdir}
+cp -a %{_builddir}/intellij-2016.1.3/idea-IC-145.1617.8/ %{buildroot}%{optdir}
 mkdir -p %{buildroot}%{sharedir}/applications
 
 
-echo '[Desktop Entry]' 					            >> %{buildroot}%{sharedir}/applications/idea.desktop
-echo 'Name=IntelliJ IDEA' 				            >> %{buildroot}%{sharedir}/applications/idea.desktop
-echo 'Type=Application'					            >> %{buildroot}%{sharedir}/applications/idea.desktop
-echo 'Exec=idea.sh'					                >> %{buildroot}%{sharedir}/applications/idea.desktop
-echo 'Terminal=false'					            >> %{buildroot}%{sharedir}/applications/idea.desktop
-echo 'Icon=idea'					                >> %{buildroot}%{sharedir}/applications/idea.desktop
+echo '[Desktop Entry]' 					>> %{buildroot}%{sharedir}/applications/idea.desktop
+echo 'Name=IntelliJ IDEA' 				>> %{buildroot}%{sharedir}/applications/idea.desktop
+echo 'Type=Application'					>> %{buildroot}%{sharedir}/applications/idea.desktop
+echo 'Exec=idea.sh'					>> %{buildroot}%{sharedir}/applications/idea.desktop
+echo 'Terminal=false'					>> %{buildroot}%{sharedir}/applications/idea.desktop
+echo 'Icon=idea'					>> %{buildroot}%{sharedir}/applications/idea.desktop
 echo 'Comment=Integrated Development Environment'	>> %{buildroot}%{sharedir}/applications/idea.desktop
-echo 'NoDisplay=false'					            >> %{buildroot}%{sharedir}/applications/idea.desktop
-echo 'Categories=Development;IDE;' 			        >> %{buildroot}%{sharedir}/applications/idea.desktop
-echo 'Name[en]=IntelliJ IDEA'				        >> %{buildroot}%{sharedir}/applications/idea.desktop
+echo 'NoDisplay=false'					>> %{buildroot}%{sharedir}/applications/idea.desktop
+echo 'Categories=Development;IDE;' 			>> %{buildroot}%{sharedir}/applications/idea.desktop
+echo 'Name[en]=IntelliJ IDEA'				>> %{buildroot}%{sharedir}/applications/idea.desktop
+
+cd %{buildroot}%{sharedir}/applications
 
 cd %{buildroot}%{prefix}/bin
 ln -s %{optdir}/idea-IC-145.1617.8/bin/idea.sh %{buildroot}%{prefix}/bin/idea.sh
