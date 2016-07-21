@@ -43,7 +43,7 @@ echo $PWD
 mkdir -p %{buildroot}%{optdir}
 mkdir -p %{buildroot}%{prefix}/bin/idea
 mkdir -p %{buildroot}%{sharedir}/pixmaps
-#cp -a /home/vagrant/rpmbuild/BUILD/intellij-2016.1.3/idea-IC-145.1617.8/ %{buildroot}%{optdir}
+
 cp -a %{_builddir}/intellij-2016.1.3/idea-IC-145.1617.8/ %{buildroot}%{optdir}
 mkdir -p %{buildroot}%{sharedir}/applications
 
